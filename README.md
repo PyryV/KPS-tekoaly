@@ -1,1 +1,1 @@
-# KPS-tekoaly
+# KPS-tekoäly
