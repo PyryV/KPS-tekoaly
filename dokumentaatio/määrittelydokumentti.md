@@ -1,6 +1,6 @@
 # Määrittelydokumentti
 
-Kurssilla aion toteuttaa tekoälyn kivi, sakset, paperi -peliin. Tarkoitukseni on myös vertailla muutamaa erilaista tekoälyä esimerkiksi siinä miten ne toimivat ihmistä, sekä toisiaan vastaan. Argoritmissä aion hyödyntää Zhijian Wangin, Bin Xun ja Hai-Jun Zhoun [tutkimusta] (https://arxiv.org/abs/1404.5199) siitä miten ihmiset tekevät päätöksiä useamman peräkkäisen kivi, sakset, paperi -pelin aikana. Tutkimukseen perustuva strategia on esitelty yksinkertaisemmin tällä Numberphile-kanavan [YouTube-videolla](https://www.youtube.com/watch?v=rudzYPHuewc&t=201s). 
+Kurssilla aion toteuttaa tekoälyn kivi, sakset, paperi -peliin. Tarkoitukseni on myös vertailla muutamaa erilaista tekoälyä esimerkiksi siinä miten ne toimivat ihmistä, sekä toisiaan vastaan. Argoritmissä aion hyödyntää Zhijian Wangin, Bin Xun ja Hai-Jun Zhoun [tutkimusta](https://arxiv.org/abs/1404.5199) siitä miten ihmiset tekevät päätöksiä useamman peräkkäisen kivi, sakset, paperi -pelin aikana. Tutkimukseen perustuva strategia on esitelty yksinkertaisemmin tällä Numberphile-kanavan [YouTube-videolla](https://www.youtube.com/watch?v=rudzYPHuewc&t=201s). 
 
 ## Algoritmit ja tietorakenteet
 
@@ -14,5 +14,5 @@ Peli tulee pyörimään tekstikäyttöliittymän avulla ja siinä annetaan syöt
 
 ## Aikavaatimukset
 
-Koska käytämme binäärihakupuuta ja päättely tehdään siinä operaatioiden tulisi valmistua ajassa *O*(log *n*) olettaen, että puusta saadaan tasapainoinen. Jos nöin ei ole operaatioiden kesto on silloin *O*(*h*), mikä ei sekään välttämättä ole paha tässä tilanteessa, sillä en odota binäärihakupuun kasvavan hirveän suureksi. Suorituksessa tulee todennäköisesti myös vakiokokoisten taulukoiden läpikäymistä, mutta koska niiden aikavaatimus on *O*(1) eivät ne vaikuta tehokkuuteen.
+Koska käytämme binäärihakupuuta ja päättely tehdään siinä operaatioiden tulisi valmistua ajassa *O*(log *n*) olettaen, että puusta saadaan tasapainoinen. Jos näin ei ole operaatioiden kesto on silloin *O*(*h*), mikä ei sekään välttämättä ole paha tässä tilanteessa, sillä en odota binäärihakupuun kasvavan hirveän suureksi. Suorituksessa tulee todennäköisesti myös vakiokokoisten taulukoiden läpikäymistä, mutta koska niiden aikavaatimus on *O*(1) eivät ne vaikuta tehokkuuteen.
    
