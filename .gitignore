@@ -1,0 +1,7 @@
+build/
+bin/
+.gradle/
+.nb-gradle/
+.DS_Store
+/.idea
+.vscode/

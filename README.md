@@ -1,1 +1,0 @@
-# KPS-tekoäly
