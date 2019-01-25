@@ -1,5 +1,8 @@
 package labyrintti.domain;
 
+/**
+ * Ruutu-olio kuvaa ruudukon yhtä ruutua ja kertoo mihin suuntiin ruudusta voi mennä.
+ */
 public class Ruutu {
     
     private boolean up;
@@ -41,19 +44,19 @@ public class Ruutu {
         }
     }
 
-    public boolean up() {
+    public boolean getUp() {
         return up;
     }
 
-    public boolean down() {
+    public boolean getDown() {
         return down;
     }
 
-    public boolean left() {
+    public boolean getLeft() {
         return left;
     }
 
-    public boolean right() {
+    public boolean getRight() {
         return right;
     }
 

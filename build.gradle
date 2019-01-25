@@ -1,9 +1,18 @@
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'jacoco'
 mainClassName = 'labyrintti.main.Main'
 
 jar {
     manifest {
         attributes 'Main-Class': 'Main'
     }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
 }
