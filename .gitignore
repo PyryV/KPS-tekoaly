@@ -11,3 +11,4 @@ bin/
 .gradle/
 gradlew
 Labyrintti.iml
+settings.gradle
