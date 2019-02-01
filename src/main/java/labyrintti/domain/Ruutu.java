@@ -1,69 +1,57 @@
 package labyrintti.domain;
 
+import java.util.ArrayList;
+
 /**
- * Ruutu-olio kuvaa ruudukon yhtä ruutua ja kertoo mihin suuntiin ruudusta voi mennä.
+ * Ruutu-olio kuvaa ruudukon yhtä ruutua ja kertoo mihin suuntiin ruudusta voi
+ * mennä.
  */
 public class Ruutu {
-    
-    private boolean up;
-    private boolean down;
-    private boolean left;
-    private boolean right;
+    private ArrayList<Ruutu> naapurit;
+    private boolean kayty;
+    private int id;
     private int x;
     private int y;
 
-    public Ruutu(int x, int y) {
+    public Ruutu(int id, int x, int y) {
         this.x = x;
         this.y = y;
-        up = true;
-        down = true;
-        left = true;
-        right = true;
+        this.id = id;
+        naapurit = new ArrayList<>();
+        kayty = false;
     }
 
-    public Ruutu(int x, int y, boolean up, boolean down, boolean left, boolean right) {
-        this.x = x;
-        this.y = y;
-        this.up = up;
-        this.down = down;
-        this.left = left;
-        this.right = right;
-    }
-
-    public void setBarrier(String direction) {
-        switch (direction) {
-            case "up": up = false;
-                        break;
-            case "down": down = false;
-                        break;
-            case "left": left = false;
-                        break;
-            case "right": right = false;
-                        break;
-            default: break;                        
+    public boolean onkoNaapuri(Ruutu ruutu) {
+        if(naapurit.contains(ruutu)) {
+            return true;
         }
+        return false;
+    }
+    
+    public void lisaaNaapuri(Ruutu ruutu) {
+        naapurit.add(ruutu);
     }
 
-    public boolean getUp() {
-        return up;
+    public boolean onkoKayty() {
+        return kayty;
     }
 
-    public boolean getDown() {
-        return down;
+    public void kay() {
+        kayty = true;
     }
 
-    public boolean getLeft() {
-        return left;
+    public Integer getId() {
+        return id;
     }
 
-    public boolean getRight() {
-        return right;
+    public Integer getX() {
+        return x;
     }
 
-    @Override
-    public String toString() {
-        return "x:" + x + " y:" + y;
+    public Integer getY() {
+        return y;
     }
+
 }
 
 

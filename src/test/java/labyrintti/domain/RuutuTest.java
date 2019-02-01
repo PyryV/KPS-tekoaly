@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class RuutuTest {
-
+/*
     @Test
     public void ruudunLuominenOnnistuu() {
         Ruutu ruutu = new Ruutu(2,3);
@@ -32,4 +32,5 @@ public class RuutuTest {
         assertFalse(ruutu.getRight());
 
     }
+    */
 }

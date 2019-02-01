@@ -5,3 +5,8 @@ bin/
 .DS_Store
 /.idea
 .vscode/
+.classpath
+.project
+.settings
+.gradle/
+gradlew
