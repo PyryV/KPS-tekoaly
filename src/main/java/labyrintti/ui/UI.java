@@ -32,6 +32,10 @@ public class UI {
         System.out.print(piirra());
     }
     
+    /**
+     * Luo labyrintistä tulostettavan merkkijonon
+     * @return labyrintti-merkkijono
+     */
     public String piirra() {
         Ruutu[][] ruudut = luoja.getRuudut();
         boolean[][] taytetaan = new boolean[koko+koko-1][koko+koko-1];

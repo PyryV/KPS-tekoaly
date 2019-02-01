@@ -3,8 +3,10 @@ package labyrintti.domain;
 import java.util.ArrayList;
 
 /**
- * Ruutu-olio kuvaa ruudukon yhtä ruutua ja kertoo mihin suuntiin ruudusta voi
- * mennä.
+ * Ruutu-olio kuvaa ruudukon yhtä ruutua 
+ * @param id;
+ * @param x;
+ * @param y;
  */
 public class Ruutu {
     private ArrayList<Ruutu> naapurit;
@@ -20,6 +22,7 @@ public class Ruutu {
         naapurit = new ArrayList<>();
         kayty = false;
     }
+
 
     public boolean onkoNaapuri(Ruutu ruutu) {
         if(naapurit.contains(ruutu)) {
