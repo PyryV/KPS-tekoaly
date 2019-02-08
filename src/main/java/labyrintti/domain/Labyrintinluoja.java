@@ -40,7 +40,7 @@ public class Labyrintinluoja {
         int n = koko*koko;
         int suunta;
         int i = 0;
-        ArrayDeque<Ruutu> pino = new ArrayDeque<>();
+        Pino pino = new Pino();
         setRuutu(0,0);
         ruudut[x][y].kay();
         pino.push(ruudut[0][0]);

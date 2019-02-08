@@ -1,0 +1,2 @@
+# Toteutusdokumentti
+Ohjelma on toteutettu Gradle-projektina ja se noudattaa kerrosarkkitehtuuria, jossa kerroksia on tässä tapauksessa vain kaksi, koska tiedon pysyväistallennusta ei ole. Ohjelman käyttöliittymäkerroksessa on vain UI-luokka, joka huolehtii käyttöliittymästä ja labyrintin piirtämisestä. Domain-kerroksessa on luokat Labyrintinluoja, joka huolehtii labyrintin luomeisesta eli luo ruudut ja tekee niistä puun, Ruutu, joka kuvastaa yhtä solmua puussa josta läbyrintti muodostuu sekä Pino, joka korvaa Javaan sisäänrakennetun pino-olion.
