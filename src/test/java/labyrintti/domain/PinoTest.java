@@ -45,7 +45,7 @@ public class PinoTest {
         assertEquals(2, pino.peek().getId());
     }
 
-    @Test(timeout = 1000)
+    @Test(timeout = 2000)
     public void popToimiiIsoillaMaarilla() {
         for(int i=0; i<1000000; i++) {
             pino.push(new Ruutu(1,1,1));
