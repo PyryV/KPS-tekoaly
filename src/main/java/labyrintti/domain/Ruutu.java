@@ -23,7 +23,11 @@ public class Ruutu {
         kayty = false;
     }
 
-
+    /**
+     * Kertoo onko annettu ruutu tämän ruudun naapuri
+     * @param ruutu
+     * @return onko annettu ruutu tämän ruudun naapuri
+     */
     public boolean onkoNaapuri(Ruutu ruutu) {
         if(naapurit.contains(ruutu)) {
             return true;
@@ -31,27 +35,38 @@ public class Ruutu {
         return false;
     }
     
+    /**
+     * Lisää ruudulle naapurin, joita ruudulla voi olla max 4
+     * @param ruutu
+     */
     public void lisaaNaapuri(Ruutu ruutu) {
         naapurit.add(ruutu);
     }
 
+    /**
+     * Kertoo onko ruudussa vielä käyty labyrintin muodostuksen aikana
+     * @return palauttaa true jos on ja false jos ei ole käyty
+     */
     public boolean onkoKayty() {
         return kayty;
     }
 
+    /**
+     * Merkkaa ruudun kayty-muuttujaan, että ruudussa on käyty
+     */
     public void kay() {
         kayty = true;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public Integer getX() {
+    public int getX() {
         return x;
     }
 
-    public Integer getY() {
+    public int getY() {
         return y;
     }
 

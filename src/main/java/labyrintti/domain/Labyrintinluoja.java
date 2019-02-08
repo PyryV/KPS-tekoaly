@@ -3,17 +3,14 @@ package labyrintti.domain;
 import java.util.ArrayDeque;
 import java.util.Random;
 
+/**
+ * Luokka, joka huolehtii koko labyrintin luonnista
+ */
 public class Labyrintinluoja {
     private Ruutu[][] ruudut;
     private int koko;
     private int x;
     private int y;
-    
-    public Labyrintinluoja() {
-
-    }
-
-
 
     public void luo(int koko) {
         this.koko = koko;
@@ -21,6 +18,9 @@ public class Labyrintinluoja {
         muodostaLabyrintti();
     }
 
+    /**
+     * Luo ruudukon johon labyrintti muodostetaan
+     */
     public void luoRuudut() {
         ruudut = new Ruutu[koko][koko];
         int id = 0;
@@ -32,6 +32,9 @@ public class Labyrintinluoja {
         }
     }
 
+    /**
+     * Muodostaa labyrintin tekemällä aiemmin luoduista ruuduista puun
+     */
     public void muodostaLabyrintti() {
         Random random = new Random();
         int n = koko*koko;
@@ -102,6 +105,12 @@ public class Labyrintinluoja {
         this.y = y;
     }
 
+    /**
+     * Päättää voiko kyseiseen ruutuun mennä
+     * @param x
+     * @param y
+     * @return palauttaa true jos voi ja false jos ei voi
+     */
     public boolean kasittele(int x, int y) {
         
         if(!(x>koko-1) && (x>=0) && !(y>koko-1) && (y>=0)) {

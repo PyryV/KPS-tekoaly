@@ -1,4 +1,4 @@
-#Viikkoraportti 3
+# Viikkoraportti 3
 
 Tällä viikolla piti vähän tsempata kun viime viikon edistyminen jäi hieman pieneksi. Suurehkoja harppauksia tuli kuitenkin tehtyä ja ohjelma osaa jo luoda ja tulostaa halutun kokoisen neliön muotoisen täydellisen labyrintin. Koodissa on kuitenkin vielä aika paljon refaktoroitavaa, mutta päätoiminnallisuus on aikalailla kunnossa vaikka tehokkuudessa on vielä hieman parannettavaa. 
 
