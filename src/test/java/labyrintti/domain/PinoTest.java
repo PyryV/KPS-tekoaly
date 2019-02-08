@@ -9,14 +9,6 @@ import org.junit.Test;
 
 public class PinoTest {
     private Pino pino;
-    private Pino pino2;
-    
-    public PinoTest() {
-        pino2 = new Pino();
-        for(int i=0; i<10000000; i++) {
-            pino2.push(new Ruutu(1,1,1));
-        }
-    }
 
     @Before
     public void setUp() {
@@ -55,11 +47,14 @@ public class PinoTest {
 
     @Test(timeout = 1000)
     public void popToimiiIsoillaMaarilla() {
-
-        for(int i=0; i<1000000000; i++) {
-            pino2.pop();
+        for(int i=0; i<1000000; i++) {
+            pino.push(new Ruutu(1,1,1));
         }
-        assertTrue(pino2.isEmpty());
+
+        for(int i=0; i<1000000; i++) {
+            pino.pop();
+        }
+        assertTrue(pino.isEmpty());
     }
 
 
