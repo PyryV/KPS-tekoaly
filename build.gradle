@@ -1,21 +1,38 @@
-apply plugin: 'java'
-apply plugin: 'application'
-apply plugin: 'jacoco'
-mainClassName = 'labyrintti.main.Main'
-
-jar {
-    manifest {
-        attributes 'Main-Class': 'Main'
+/*
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.4'
     }
 }
 
+apply plugin: 'com.github.johnrengelman.shadow'
+*/
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'jacoco'
+
+mainClassName = 'labyrintti.main.Main'
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
     testCompile 'junit:junit:4.12'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'labyrintti.main.Main'
+    }
+}
+
+run {
+    standardInput = System.in
 }
 
 jacocoTestReport {
@@ -25,7 +42,5 @@ jacocoTestReport {
     }
 }
 
-run {
-    standardInput = System.in
-}
+
 

@@ -17,14 +17,26 @@ public class UI {
     }
 
     public void kaynnista() {
-         
-        setKoko(scanner.nextInt());
+        while(true) {
+            System.out.println("||------------------------------------------||");
+            System.out.println("|| Anna labyrintin sivunpituus.             ||");
+            System.out.println("|| Ykköstä pienempi luku lopettaa ohjelman. ||");
+            System.out.println("||------------------------------------------||");
+            setKoko(scanner.nextInt());
+            if(koko <= 0) {
+                break;
+            }
+
+            long time1 = System.currentTimeMillis();
+            luo();
+            long time2 = System.currentTimeMillis();
+            System.out.println();
+            System.out.println();
+            System.out.println("AIKAA MENI: " + (time2-time1) + "ms");
+            System.out.println();
+        } 
         scanner.close();
-        long time1 = System.currentTimeMillis();
-        luo();
-        long time2 = System.currentTimeMillis();
-        System.out.println();
-        System.out.println("Aikaa meni: " + (time2-time1) + "ms");
+
     }
     
     public void setKoko(int koko) {
@@ -60,6 +72,15 @@ public class UI {
                 taytetaan[j+j][i+i] = true;
             }
         }
+        return piirra2(taytetaan);
+    }
+
+    public boolean meneekoYli(int x, int y) {
+        if(x>koko+koko-1 || y>koko+koko-1) return false;
+        return true; 
+    }
+
+    public String piirra2(boolean[][] taytetaan) {
         String labyrintti = "";
         System.out.println();
         for(int i=0; i<koko+koko+1; i++) {
@@ -92,10 +113,4 @@ public class UI {
         
         return labyrintti;
     }
-
-    public boolean meneekoYli(int x, int y) {
-        if(x>koko+koko-1 || y>koko+koko-1) return false;
-        return true; 
-    }
-
 }

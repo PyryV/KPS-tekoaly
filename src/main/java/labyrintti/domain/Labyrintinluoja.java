@@ -1,6 +1,5 @@
 package labyrintti.domain;
 
-import java.util.ArrayDeque;
 import java.util.Random;
 
 /**
@@ -138,4 +137,6 @@ public class Labyrintinluoja {
     public Ruutu[][] getRuudut() {
         return ruudut;
     }
+
+    
 }
