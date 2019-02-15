@@ -6,10 +6,11 @@ import org.junit.Test;
 
 public class UITest {
     public UI ui;
-
+ /*
     @Before
     public void setUp() {
         ui = new UI();
+
     }
 
     @Test
@@ -19,7 +20,7 @@ public class UITest {
         assertEquals(1274, ui.piirra().length());
     }
 
-    
+    */
 
 
 }

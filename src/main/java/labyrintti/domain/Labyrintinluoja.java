@@ -36,6 +36,7 @@ public class Labyrintinluoja {
      * Muodostaa labyrintin tekemällä aiemmin luoduista ruuduista puun
      */
     public void muodostaLabyrintti() {
+        
         Random random = new Random();
         int n = koko*koko;
         int suunta;

@@ -9,9 +9,6 @@ jar {
     }
 }
 
-run{
-    standardInput = System.in
-}
 
 repositories {
     jcenter()
@@ -27,3 +24,8 @@ jacocoTestReport {
         html.enabled true
     }
 }
+
+run {
+    standardInput = System.in
+}
+

@@ -8,19 +8,23 @@ import labyrintti.domain.Ruutu;
 public class UI {
     private int koko;
     private Labyrintinluoja luoja;
+    private Scanner scanner;
 
 
-    public UI() {
-        luoja = new Labyrintinluoja();
+    public UI(Labyrintinluoja luoja, Scanner scanner) {
+        this.luoja = luoja;
+        this.scanner = scanner;
     }
 
     public void kaynnista() {
-        System.out.println("Labyrintin koko: ");
-        System.out.println();
-        Scanner scanner = new Scanner(System.in);
+         
         setKoko(scanner.nextInt());
         scanner.close();
+        long time1 = System.currentTimeMillis();
         luo();
+        long time2 = System.currentTimeMillis();
+        System.out.println();
+        System.out.println("Aikaa meni: " + (time2-time1) + "ms");
     }
     
     public void setKoko(int koko) {

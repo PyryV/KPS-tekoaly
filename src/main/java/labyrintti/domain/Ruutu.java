@@ -9,17 +9,19 @@ import java.util.ArrayList;
  * @param y;
  */
 public class Ruutu {
-    private ArrayList<Ruutu> naapurit;
+    private Ruutu[] naapurit;
     private boolean kayty;
     private int id;
     private int x;
     private int y;
+    private int paikka;
 
     public Ruutu(int id, int x, int y) {
         this.x = x;
         this.y = y;
         this.id = id;
-        naapurit = new ArrayList<>();
+        paikka = 0;
+        naapurit = new Ruutu[4];
         kayty = false;
     }
 
@@ -29,8 +31,8 @@ public class Ruutu {
      * @return onko annettu ruutu tämän ruudun naapuri
      */
     public boolean onkoNaapuri(Ruutu ruutu) {
-        if(naapurit.contains(ruutu)) {
-            return true;
+        for(int i=0; i<paikka; i++) {
+            if(ruutu.getId() == naapurit[i].getId()) return true;
         }
         return false;
     }
@@ -40,7 +42,8 @@ public class Ruutu {
      * @param ruutu
      */
     public void lisaaNaapuri(Ruutu ruutu) {
-        naapurit.add(ruutu);
+        naapurit[paikka] = ruutu;
+        paikka++;
     }
 
     /**
