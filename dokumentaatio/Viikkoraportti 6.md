@@ -7,4 +7,5 @@ Tehtävä | Käytetty aika
 Dokumentaatio | 4h
 Testien säätäminen | 2h
 Muutamat pikkukorjaukset | 3h
-**yhteensä** | **9h**
+Vertaisarviointi | 2h
+**yhteensä** | **11h**
