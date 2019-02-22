@@ -11,4 +11,4 @@ bin/
 .gradle/
 gradlew
 Labyrintti.iml
-
+gradlew.bat
