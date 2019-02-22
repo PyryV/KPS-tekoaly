@@ -11,10 +11,11 @@ public class Labyrintinluoja {
     private int x;
     private int y;
 
-    public void luo(int koko) {
+    public Ruutu[][] luo(int koko) {
         this.koko = koko;
         luoRuudut();
         muodostaLabyrintti();
+        return ruudut;
     }
 
     /**

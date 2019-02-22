@@ -35,6 +35,13 @@ public class PinoTest {
         assertTrue(pino.isEmpty());
     }
 
+    @Test
+    public void popEiTeeMitaanJosPinoOnTyhja() {
+        assertTrue(pino.isEmpty());
+        pino.pop();
+        assertTrue(pino.isEmpty());
+    }
+
     //Travis ei saa alla olevia testejä läpi alle sekunnin 
 
     @Test //(timeout = 1000)

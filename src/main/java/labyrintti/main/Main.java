@@ -10,7 +10,7 @@ public class Main {
         
         Labyrintinluoja luoja = new Labyrintinluoja();
         Scanner scanner = new Scanner(System.in);
-        UI ui = new UI(luoja, scanner);
+        UI ui = new UI(scanner);
         ui.kaynnista();
     }
 }

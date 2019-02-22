@@ -11,8 +11,8 @@ public class UI {
     private Scanner scanner;
 
 
-    public UI(Labyrintinluoja luoja, Scanner scanner) {
-        this.luoja = luoja;
+    public UI(Scanner scanner) {
+        this.luoja = new Labyrintinluoja();
         this.scanner = scanner;
     }
 
@@ -44,16 +44,14 @@ public class UI {
     }
 
     public void luo() {
-        luoja.luo(koko);
-        System.out.print(piirra());
+        System.out.print(piirra(luoja.luo(koko)));
     }
     
     /**
      * Luo labyrintistä tulostettavan merkkijonon
      * @return labyrintti-merkkijono
      */
-    public String piirra() {
-        Ruutu[][] ruudut = luoja.getRuudut();
+    public String piirra(Ruutu[][] ruudut) {
         boolean[][] taytetaan = new boolean[koko+koko-1][koko+koko-1];
         for(int i = 0; i<ruudut.length; i++) {
             for(int j = 0; j<ruudut.length; j++) {

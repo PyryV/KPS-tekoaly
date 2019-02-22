@@ -8,6 +8,10 @@ public class Pino {
         tyhja = true;
     }
 
+    /**
+     * Lisää annetun alkion pinon päällimmäiseksi
+     * @param ruutu
+     */
     public void push(Ruutu ruutu) {
         if(tyhja) {
             ylin = new Alkio(ruutu);
@@ -19,7 +23,9 @@ public class Pino {
             ylin = alkio;
         }
     }
-
+    /**
+     * Poistaa pinon päällimmäisen alkion
+     */
     public void pop() {
         
         if(!tyhja) {
@@ -31,11 +37,17 @@ public class Pino {
             }
         }
     }
-
+    /**
+     * Tarkistaa onko pino tyhjä
+     * @return true jos on
+     */
     public boolean isEmpty() {
         return tyhja;
     }
 
+    /**
+     * Palauttaa pinon päällimmäisen alkion
+     */
     public Ruutu peek() {
         return ylin.ruutu;
     }
