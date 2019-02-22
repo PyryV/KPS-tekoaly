@@ -20,10 +20,10 @@ public class UI {
 
     public void kaynnista() {
         while(true) {
-            System.out.println("||------------------------------------------||");
-            System.out.println("|| Anna labyrintin sivunpituus.             ||");
+            System.out.println("||-------------------------------------------||");
+            System.out.println("|| Anna labyrintin sivunpituus.              ||");
             System.out.println("|| Kakkosta pienempi luku lopettaa ohjelman. ||");
-            System.out.println("||------------------------------------------||");
+            System.out.println("||-------------------------------------------||");
             setKoko(scanner.nextInt());
             if(koko <= 1) {
                 break;

@@ -11,12 +11,12 @@ Labyrintissä on reitti, jota pitkin pääsee takaisin löhtöpisteeseen käänt
 Labyrintissä on alue johon ei pääse ollenkaan.
 
 ## Labyrintinluoja
-Labyritinluojasta testataan ensin, että ruutujen luominen toimii, jonka jälkeen testataan se, että ruuduista voi luoda halutun kokoisen labyrintin. Kaikki testaus labyrintinluojaan toteutetaan junit testeinä. 
+Labyritinluojasta testataan ensin, että ruutujen luominen toimii, jonka jälkeen testataan se, että ruuduista voi luoda halutun kokoisen labyrintin. Melkein kaikki testaus labyrintinluojaan toteutetaan JUnit-testeinä. Itse labyrinttien täydellisyyden testaaminen on haastavaa, sillä jokaista mahdollista labyrinttia ei voi testata, joten joudun sen osalta vain luottamaan siihen, että koska en ole vielä ohjelmaa ajaessani nähnyt virheellistä labyrintti täytyy labyrintin luomisen toimia oikein. 
 
 ## Ruutu
-Ruudusta JUnit-testeillä testataan yleisesti toimivatko ruudun luominen, toimiiko naapurin lisääminen ruudulle ja toimiiko ruudun käydyksi merkitseminen oikein.
+Ruudun testaaminen on aika triviaalia, koska Ruutu-olio ei itsessään tee juuri mitään muuta kuin palauttaa tietoja itsestään, joten kaikki testaaminen voidaan tehdä helposti JUnit-testeillä.
 
 ## Pino
-Pinosta on testattu tutkimalla tehokkuus ja näiden testien perusteella pino kykenee suorittamaan noin miljoona pinoon lisäystä ja poistoa sekunnissa. Tehokkuutta ei testata JUnit-testeillä, koska Traviksella oli ongelmia saada testejä suoritettua alle sekunnissa. JUnit-testit liittyvät lähinnä pinon toimintaan yleisesti eli siihen toimivatko push, pop, ja peek -metodit oikein. 
+Pinosta on testattu tutkimalla tehokkuus ja näiden testien perusteella pino kykenee suorittamaan noin miljoona pinoon lisäystä ja poistoa sekunnissa. Tehokkuutta ei testata JUnit-testeillä, koska Traviksella oli ongelmia saada testejä suoritettua alle sekunnissa. JUnit-testit liittyvät lähinnä pinon toimintaan yleisesti eli siihen toimivatko push, pop, ja peek -metodit oikein. Pinosta myös testataan, että se ei hajoa jos tyhjän pinon pop()-metodia kutsutaan.
 
 
