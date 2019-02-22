@@ -22,33 +22,20 @@ public class UI {
         while(true) {
             System.out.println("||------------------------------------------||");
             System.out.println("|| Anna labyrintin sivunpituus.             ||");
-            System.out.println("|| Ykköstä pienempi luku lopettaa ohjelman. ||");
+            System.out.println("|| Kakkosta pienempi luku lopettaa ohjelman. ||");
             System.out.println("||------------------------------------------||");
             setKoko(scanner.nextInt());
-            if(koko <= 0) {
+            if(koko <= 1) {
                 break;
             }
-            if(koko == 1) {
-                System.out.println("XXXXXXXXXXXXXXXXXXXXXX");
-                System.out.println("XX      XX          XX");
-                System.out.println("XXXXXX  XX  XXXXXX  XX");
-                System.out.println("XX      XX      XX  XX");
-                System.out.println("XX  XXXXXXXXXX  XXXXXX");
-                System.out.println("XX          XX      XX");
-                System.out.println("XXXXXXXXXX  XXXXXX  XX");
-                System.out.println("XX              XX  XX");
-                System.out.println("XX  XXXXXXXXXX  XX  XX");
-                System.out.println("XX                  XX"); 
-                System.out.println("XXXXXXXXXXXXXXXXXXXXXX");               
-            }
-            /*
+            
             long time1 = System.currentTimeMillis();
             luo();
             long time2 = System.currentTimeMillis();
             System.out.println();
             System.out.println();
             System.out.println("AIKAA MENI: " + (time2-time1) + "ms");
-            System.out.println();*/
+            System.out.println();
         } 
         scanner.close();
 
