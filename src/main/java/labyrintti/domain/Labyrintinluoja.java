@@ -1,7 +1,5 @@
 package labyrintti.domain;
 
-import java.util.Random;
-
 /**
  * Luokka, joka huolehtii koko labyrintin luonnista
  */
@@ -10,11 +8,17 @@ public class Labyrintinluoja {
     private int koko;
     private int x;
     private int y;
+    private long time1;
+    private long time2;
+    private long time3;
 
     public Ruutu[][] luo(int koko) {
         this.koko = koko;
+        time1 = System.currentTimeMillis();
         luoRuudut();
+        time2 = System.currentTimeMillis();
         muodostaLabyrintti();
+        time3 = System.currentTimeMillis();
         return ruudut;
     }
 
@@ -36,21 +40,17 @@ public class Labyrintinluoja {
      * Muodostaa labyrintin tekemällä aiemmin luoduista ruuduista puun
      */
     public void muodostaLabyrintti() {
-        
-        Random random = new Random();
-        int n = koko*koko;
+        Satunnainen satunnainen = new Satunnainen();
         int suunta;
-        int i = 0;
         Pino pino = new Pino();
         setRuutu(0,0);
         ruudut[x][y].kay();
         pino.push(ruudut[0][0]);
         while(true) {
-            suunta = random.nextInt(3);
+            suunta = satunnainen.getLuku();
             int askeleet = 0;
             while(askeleet<5) {
                 if(suunta==0 && kasittele(x+1, y)) {
-                    i++;
                     pino.push(ruudut[x][y]);
                     setRuutu(x+1, y);
                     askeleet = 0;
@@ -60,7 +60,6 @@ public class Labyrintinluoja {
                     askeleet++;
                 }
                 if(suunta==1 && kasittele(x-1, y)) {
-                    i++;
                     pino.push(ruudut[x][y]);
                     setRuutu(x-1, y);
                     askeleet = 0;
@@ -70,7 +69,6 @@ public class Labyrintinluoja {
                     askeleet++;
                 }
                 if(suunta==2 && kasittele(x, y+1)) {
-                    i++;
                     pino.push(ruudut[x][y]);
                     setRuutu(x, y+1);
                     askeleet = 0;
@@ -80,7 +78,6 @@ public class Labyrintinluoja {
                     askeleet++;
                 }
                 if(suunta==3 && kasittele(x, y-1)) {
-                    i++;
                     pino.push(ruudut[x][y]);
                     setRuutu(x, y-1);
                     askeleet = 0;
@@ -139,5 +136,8 @@ public class Labyrintinluoja {
         return ruudut;
     }
 
-    
+    public long[] getAjat() {
+        long[] ajat = {(time2-time1), (time3-time2)};
+        return ajat;
+    }
 }

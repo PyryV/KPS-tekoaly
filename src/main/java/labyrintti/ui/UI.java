@@ -2,15 +2,18 @@ package labyrintti.ui;
 
 import java.util.Scanner;
 
-import javax.sound.sampled.SourceDataLine;
-
 import labyrintti.domain.Labyrintinluoja;
 import labyrintti.domain.Ruutu;
 
+/**
+ * Luokka, joka huolehtii käyttöliittymästä ja labyrintin piirtämisestä
+ */
 public class UI {
     private int koko;
     private Labyrintinluoja luoja;
     private Scanner scanner;
+    private long time1;
+    private long time2;
 
 
     public UI(Scanner scanner) {
@@ -29,12 +32,13 @@ public class UI {
                 break;
             }
             
-            long time1 = System.currentTimeMillis();
+            
             luo();
-            long time2 = System.currentTimeMillis();
             System.out.println();
             System.out.println();
-            System.out.println("AIKAA MENI: " + (time2-time1) + "ms");
+            System.out.println("Ruutujen luominen kesti: " + luoja.getAjat()[0] + "ms");
+            System.out.println("Labyrintin luominen kesti: " + luoja.getAjat()[1]+ "ms");
+            System.out.println("Piirtäminen kesti: " + (time2-time1) + "ms");
             System.out.println();
         } 
         scanner.close();
@@ -54,6 +58,7 @@ public class UI {
      * @return labyrintti-merkkijono
      */
     public String piirra(Ruutu[][] ruudut) {
+        time1 = System.currentTimeMillis();
         boolean[][] taytetaan = new boolean[koko+koko-1][koko+koko-1];
         for(int i = 0; i<ruudut.length; i++) {
             for(int j = 0; j<ruudut.length; j++) {
@@ -72,7 +77,10 @@ public class UI {
                 taytetaan[j+j][i+i] = true;
             }
         }
-        return piirra2(taytetaan);
+        String labyrintti = piirra2(taytetaan);
+
+        time2 = System.currentTimeMillis();
+        return labyrintti;
     }
 
     public boolean meneekoYli(int x, int y) {
