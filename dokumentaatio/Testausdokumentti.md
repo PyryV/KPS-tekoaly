@@ -11,7 +11,15 @@ Labyrintissä on reitti, jota pitkin pääsee takaisin löhtöpisteeseen käänt
 Labyrintissä on alue johon ei pääse ollenkaan.
 
 ## Labyrintinluoja
-Labyritinluojasta testataan ensin, että ruutujen luominen toimii, jonka jälkeen testataan se, että ruuduista voi luoda halutun kokoisen labyrintin. Melkein kaikki testaus labyrintinluojaan toteutetaan JUnit-testeinä. Itse labyrinttien täydellisyyden testaaminen on haastavaa, sillä jokaista mahdollista labyrinttia ei voi testata, joten joudun sen osalta vain luottamaan siihen, että koska en ole vielä ohjelmaa ajaessani nähnyt virheellistä labyrintti täytyy labyrintin luomisen toimia oikein. 
+Labyritinluojasta testataan ensin, että ruutujen luominen toimii, jonka jälkeen testataan se, että ruuduista voi luoda halutun kokoisen labyrintin. Melkein kaikki testaus labyrintinluojaan toteutetaan JUnit-testeinä. Itse labyrinttien täydellisyyden testaaminen on haastavaa, sillä jokaista mahdollista labyrinttia ei voi testata, joten joudun sen osalta vain luottamaan siihen, että koska en ole vielä ohjelmaa ajaessani nähnyt virheellistä labyrintti täytyy labyrintin luomisen toimia oikein. Labyrintinluomisen aikavaativuuksia testattiin empiirisesti, siten että labyrintin tulostaminen konsoliin otettiin väliaikaisesti pois käytöstä, koska se oli niin suuri pullonkaula. Vaikka testauksen lopputuloksissa oli välillä suurehkoakin hajontaa voidaan todeta, että labyrintin luominen toimii jotakuinkin ajassa O(n^2).
+
+Sivunpituus | Ruudukon luomiseen kulunut aika | Labyrintin muodostamiseen kulunut aika
+--|--|--
+100 | <1ms | 5ms
+500 | 8ms | 36ms
+1000 | 26ms | 141ms
+1500 | 64ms | 319ms
+
 
 ## Ruutu
 Ruudun testaaminen on aika triviaalia, koska Ruutu-olio ei itsessään tee juuri mitään muuta kuin palauttaa tietoja itsestään, joten kaikki testaaminen voidaan tehdä helposti JUnit-testeillä.

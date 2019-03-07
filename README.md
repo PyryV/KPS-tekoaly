@@ -5,6 +5,10 @@
 
 Ohjelma joka generoi satunnaisesti labyrintin annetun kokoiseen ruudukkoon.
 
+[Release](https://github.com/PyryV/Labyrintti/releases/tag/v1.0)
+
+[Käyttöohje](https://github.com/PyryV/Labyrintti/blob/master/dokumentaatio/K%C3%A4ytt%C3%B6ohje.md)
+
 ## Lähteet
 
 [Mazes](http://datagenetics.com/blog/november22015/index.html)
